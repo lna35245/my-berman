@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const botonRomantico = document.querySelector('.boton-romantico');
-    const florContenedor = document.getElementById('flor-contenedor');
 
-    if (botonRomantico && florContenedor) {
+    if (botonRomantico) {
         botonRomantico.addEventListener('click', () => {
-            florContenedor.classList.toggle('flor-visible');
+            alert('¡Hiciste clic en el botón!');
         });
 
         // (El resto de tu código JavaScript existente para los efectos hover)
