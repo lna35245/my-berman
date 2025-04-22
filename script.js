@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (botonRomantico) {
         botonRomantico.addEventListener('click', () => {
-            alert('¡Hiciste clic en el botón!');
+            alert('no hace nada todavia amorcito, intentalo en otro momento');
         });
 
         // (El resto de tu código JavaScript existente para los efectos hover)
