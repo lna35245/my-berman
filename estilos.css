@@ -1,14 +1,14 @@
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f8f0e3; /* Un tono crema suave para el día */
-    color: #5e544e; /* Un marrón suave para el día */
+    background-color: #f8f0e3; /* Un tono crema suave */
+    color: #5e544e; /* Un marrón suave */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     overflow: hidden; /* Para evitar barras de desplazamiento innecesarias */
-    transition: background-color 0.5s ease; /* Transición suave para el fondo */
 }
 
 .contenedor {
@@ -17,7 +17,6 @@ body {
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición para ocultar */
 }
 
 .titulo {
@@ -69,13 +68,11 @@ body {
     border-radius: 30px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .boton-romantico:hover {
     background-color: #e66a6a;
-    transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Animaciones */
@@ -128,11 +125,4 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Clase para ocultar elementos */
-.oculto {
-    opacity: 0;
-    transform: scale(0.9);
-    pointer-events: none; /* Evita que el elemento oculto reciba eventos del ratón */
 }
