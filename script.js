@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const botonRomantico = document.querySelector('.boton-romantico');
-    if (botonRomantico) {
+    const florContenedor = document.getElementById('flor-contenedor');
+
+    if (botonRomantico && florContenedor) {
+        botonRomantico.addEventListener('click', () => {
+            florContenedor.classList.toggle('flor-visible');
+        });
+
+        // (El resto de tu código JavaScript existente para los efectos hover)
         botonRomantico.addEventListener('mouseover', () => {
             botonRomantico.style.transform = 'scale(1.03)';
             botonRomantico.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.1)';
@@ -12,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Pequeño efecto de "latido" en la imagen (opcional)
     const imagenContenedor = document.querySelector('.imagen-contenedor');
     if (imagenContenedor) {
         imagenContenedor.addEventListener('mouseover', () => {
