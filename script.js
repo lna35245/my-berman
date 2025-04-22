@@ -1,28 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const botonRomantico = document.querySelector('.boton-romantico');
-    if (botonRomantico) {
-        botonRomantico.addEventListener('mouseover', () => {
-            botonRomantico.style.transform = 'scale(1.03)';
-            botonRomantico.style.boxShadow = '0 6px 12px rgba(0, 0, 0, 0.1)';
-        });
+    const botonSi = document.getElementById('si');
+    const botonNo = document.getElementById('no');
+    const mensajeSi = document.getElementById('mensaje-si');
+    const mensajeNo = document.getElementById('mensaje-no');
+    const botonPensarMas = document.getElementById('pensar-mas');
 
-        botonRomantico.addEventListener('mouseout', () => {
-            botonRomantico.style.transform = 'scale(1)';
-            botonRomantico.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.15)';
-        });
-    }
+    botonSi.addEventListener('click', () => {
+        document.getElementById('pregunta').classList.add('oculto');
+        mensajeSi.classList.remove('oculto');
+    });
 
-    // Pequeño efecto de "latido" en la imagen (opcional)
-    const imagenContenedor = document.querySelector('.imagen-contenedor');
-    if (imagenContenedor) {
-        imagenContenedor.addEventListener('mouseover', () => {
-            imagenContenedor.style.animationPlayState = 'paused';
-            imagenContenedor.classList.add('hovered');
-        });
+    botonNo.addEventListener('click', () => {
+        document.getElementById('pregunta').classList.add('oculto');
+        mensajeNo.classList.remove('oculto');
+    });
 
-        imagenContenedor.addEventListener('mouseout', () => {
-            imagenContenedor.style.animationPlayState = 'running';
-            imagenContenedor.classList.remove('hovered');
+    if (botonPensarMas) {
+        botonPensarMas.addEventListener('click', () => {
+            mensajeNo.classList.add('oculto');
+            document.getElementById('pregunta').classList.remove('oculto');
         });
     }
 });
