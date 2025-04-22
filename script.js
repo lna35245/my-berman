@@ -1,25 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const botonNoche = document.getElementById('botonNoche');
-    const botonDia = document.getElementById('botonDia');
-    const contenedorOriginal = document.querySelector('.contenedor');
-    const nocheEstrellada = document.getElementById('nocheEstrellada');
-    const body = document.body;
-
-    if (botonNoche && contenedorOriginal && nocheEstrellada && botonDia) {
-        botonNoche.addEventListener('click', () => {
-            contenedorOriginal.classList.add('oculto');
-            nocheEstrellada.classList.remove('oculto');
-            body.classList.add('modo-noche');
-        });
-
-        botonDia.addEventListener('click', () => {
-            contenedorOriginal.classList.remove('oculto');
-            nocheEstrellada.classList.add('oculto');
-            body.classList.remove('modo-noche');
-        });
-    }
-
-    // (El resto de tu código JavaScript existente para los efectos hover)
     const botonRomantico = document.querySelector('.boton-romantico');
     if (botonRomantico) {
         botonRomantico.addEventListener('mouseover', () => {
@@ -33,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Pequeño efecto de "latido" en la imagen (opcional)
     const imagenContenedor = document.querySelector('.imagen-contenedor');
     if (imagenContenedor) {
         imagenContenedor.addEventListener('mouseover', () => {
